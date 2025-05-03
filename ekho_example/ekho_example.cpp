@@ -8,8 +8,13 @@
 #include "ekho.h"
 
 int main() {
-  // ekho::Ekho ekho_player;
-  // ekho_player.setVoice("Mandarin");  
+  ekho::Ekho ekho_player;
+  ekho_player.setVoice("Mandarin");  
+  ekho_player.setChannels(2);
+  ekho_player.setSampleRate(44100);
+
+  // output text to WAVE file
+  ekho_player.saveWav("hahaha", "/mnt/workspace/cgz_workspace/Exercise/tts_example/output/hahaha.wav");
 
   return 0;
 }

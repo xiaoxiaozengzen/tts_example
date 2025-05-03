@@ -13,3 +13,5 @@ CMakeUserPresets.json
 build
 install
 log
+output/*.wav
+output/*.txt
