@@ -56,6 +56,15 @@ int sndfile_example() {
     return -1;
   }
 
+  /**
+   * @brief 读取音频数据
+   * 
+   * @param sndfile SNDFILE* 指针
+   * @param ptr 指向数据的指针
+   * @param frames 读取的帧数
+   * 
+   * @return sf_count_t 实际读取的帧数
+   */
   sf_count_t frames_read = sf_readf_short(sndfile, buffer, sfinfo.frames);
   if(frames_read < 0) {
     std::cerr << "Error reading frames: " << sf_strerror(sndfile) << std::endl;
